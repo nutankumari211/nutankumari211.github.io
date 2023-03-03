@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--width = device-width part sets the width of the page to follow the screen-width of the device -->
+    <!--initial-scale = 1.0 part sets the initial zoom level when the page is first loaded by the browser -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+        <title>
+            Alarm Clock(24 Hour-Clock)
+        </title>
+    </head>
+    <body>
+         <!--This is going to be a 24 hour clock--> 
+        <div class="first">
+            <div class="time-display">
+                <img class="timer" src="myclock.png" alt="clock">
+                
+            </div>
+         <section class="container">
+            <div id="clock" ></div>
+             <!--This form contains input elements to enter hours,minutes and seconds -->
+        <form class="setAlarm">
+        <div class="set-alarm-field" >
+            <!--min attribute together with the max attribute is set to set min-max value that hour,minute ans second hand can have.-->
+            <input id="set-input" type="number" name="a_hour" id="a_hour" placeholder="Hour" max="23" min="00">
+            <input id="set-input" type="number" name="a_min" id="a_min" placeholder="Minutes" max="59" min="00">
+            <input id="set-input"type="number" name="a_sec" id="a_sec" placeholder="Seconds" max="59" min="00">
+        </div>
+            <div class="controls">
+                <!--Two button elements are used-one set-alarm button and one stop button (in a form):-->
+                <button type="submit" class="set-alarm">Set Alarm</button>
+                <button type="reset" onclick="clearAlarm()" class="clear-alarm">Stop Alarm</button>
+            </div>
+        </form> 
+    </section>
+    
+
+    <section>
+        <div>
+            <h3 class="alarm-heading">Your Set Alarms</h3>
+        </div>
+        <div>
+            <ul id = "myList">
+                
+            </ul>
+        </div>
+    </section>
+</div>
+      <script src="index.js"></script>
+    </body>
+</html>
